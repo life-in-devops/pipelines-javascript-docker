@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: lifeindevopspipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: lifeindevopspipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: lifeindevopspipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: lifeindevopspipelinesjavascriptdocker 
+          image: learnazuredevopsproject.azurecr.io/lifeindevopspipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
